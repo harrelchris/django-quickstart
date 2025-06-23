@@ -1,0 +1,11 @@
+.idea/
+.local/
+.media/
+.pytest_cache/
+.ruff_cache/
+.static/
+.venv/
+__pycache__/
+
+.DS_Store
+.env
