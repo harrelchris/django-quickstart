@@ -4,6 +4,6 @@ set -e
 
 source .venv/bin/activate
 
-python manage.py collectstatic --no-input --clear
+python manage.py collectstatic --no-input
 
-python -m gunicorn
+python -m gunicorn --workers=1
