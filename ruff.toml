@@ -1,4 +1,5 @@
 extend-exclude = [
+    "fixtures",
     "migrations",
     "static",
     "templates",
