@@ -5,24 +5,19 @@ Django application quickstart
 ## Requirements
 
 - [Python 3](https://www.python.org/downloads/)
+  - `brew install python@3.14`
 - [Postgres](https://www.postgresql.org/download/)
+  - `brew install postgresql@18`
 - [Docker](https://docs.docker.com/get-started/get-docker/)
+  - `brew install --cask docker-desktop`
 
 ## Development
 
-```shell
-source scripts/.aliases
-init
-db
-run
-```
-
-## Aliases
-
-Load shell aliases
+Install aliases
 
 ```shell
-source scripts/.aliases
+cat ./scripts/.aliases >> ~/.zshrc
+source ~/.zshrc
 ```
 
 ## Scripts
