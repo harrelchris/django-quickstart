@@ -11,6 +11,7 @@ admin.site.site_title = "Django Admin"
 
 urlpatterns = [
     path("", include("index.urls"), name="index"),
+    path("account/", include("allauth.urls")),
     path("admin/", admin.site.urls),
     path("users/", include("users.urls"), name="users"),
 ]
