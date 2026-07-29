@@ -1,0 +1,28 @@
+<header class="p-3">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a href="{% url 'index:index' %}" class="d-flex align-items-center mb-2 mb-lg-0 text-decoration-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="me-2">
+          <rect width="32" height="32" fill="currentColor" />
+        </svg>
+      </a>
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li>
+          {% if user.is_authenticated %}
+            <a href="{% url 'users:dashboard' %}" class="nav-link px-2 text-primary">Dashboard</a>
+          {% else %}
+            <a href="{% url 'index:index' %}" class="nav-link px-2 text-primary">Home</a>
+          {% endif %}
+        </li>
+      </ul>
+      <div class="text-end">
+        {% if user.is_authenticated %}
+          <a class="btn btn-outline-dark me-2" href="{% url 'account_logout' %}">Log Out</a>
+        {% else %}
+          <a class="btn btn-outline-primary me-2" href="{% url 'account_login' %}">Log In</a>
+          <a class="btn btn-outline-secondary me-2" href="{% url 'account_signup' %}">Sign Up</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</header>
