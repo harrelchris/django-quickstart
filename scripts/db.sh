@@ -12,6 +12,12 @@ dropuser "$POSTGRES_USER"
 createuser "$POSTGRES_USER"
 createdb "$POSTGRES_DB" --owner="$POSTGRES_USER"
 
+# rm app/app_name/migrations/0001_initial.py
+
 python manage.py makemigrations
 python manage.py migrate
 python manage.py createsuperuser --noinput --username user --email user@email.com
+
+# python manage.py dumpdata app_name.ModelName -o app/fixtures/model_names.json --indent 2
+
+# python manage.py loaddata app/fixtures/model_names.json
