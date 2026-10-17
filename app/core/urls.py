@@ -17,10 +17,10 @@ urlpatterns = [
 ]
 
 if settings.DEBUG:
-    urlpatterns.extend(static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT))
-    urlpatterns.extend(static(settings.STATIC_URL, document_root=settings.STATIC_ROOT))
+    urlpatterns.extend(static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT))  # noqa
+    urlpatterns.extend(static(settings.STATIC_URL, document_root=settings.STATIC_ROOT))  # noqa
     urlpatterns.extend(
-        [
+        [  # noqa
             path(
                 "400/",
                 defaults.bad_request,
