@@ -125,7 +125,7 @@ LOGIN_REDIRECT_URL = "users:dashboard"
 
 MEDIA_ROOT = BASE_DIR.parent / ".media/"
 
-MEDIA_URL = "media/"
+MEDIA_URL = "/media/"
 
 STATIC_ROOT = BASE_DIR.parent / ".static/"
 
