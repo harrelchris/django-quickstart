@@ -6,6 +6,8 @@
 .static/
 .venv/
 __pycache__/
+htmlcov/
 
+.coverage
 .DS_Store
 .env
